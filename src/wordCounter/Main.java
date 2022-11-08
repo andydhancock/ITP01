@@ -9,12 +9,16 @@ public class Main {
 
         do {
             w.addLine(u.getLine());
-        } while (w.isLast() == false);
+        } while (!w.isLast());
 
         int numChars = w.getNumChars();
         int numRows = w.getNumRows();
 
         u.outputNumbers(numChars, numRows);
 
+        int numWords = w.getNumWords();
+        String longestWord = w.getLongestWord();
+
+        u.outputWordStats(numWords, longestWord);
     }
 }
